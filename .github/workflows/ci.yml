@@ -19,8 +19,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Debug GitHub ref
+  	run: echo "GITHUB_REF = $GITHUB_REF"
+
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm test
+		
